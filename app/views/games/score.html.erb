@@ -1,0 +1,13 @@
+<h1>Votre score est de :</h1>
+<% if @stock == false %>
+Sorry but <%= @attempt %> does not seem to be a valid word...
+<% end %>
+
+<% if @stock == true %>
+<strong>Congratulations !</strong> "<%= @attempt %>" is a valid english word !
+<% end %>
+
+<% if @attempt != @dernier %>
+NON
+<% end %>
+<%= link_to "Cliquez ici pour rejouer!", new_path %>
